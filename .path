@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+# 路径相关,主要是用来引入bin文件
+
+export PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+# Shell -- 优先 使用 gnu 的命令行(为与Linux统一)
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+# NODEJS -- 加载NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export PATH="$HOME/.yarn/bin:$PATH"
+
+# PYTHON -- 加载PYENV
+
+# 自动补全,比较耗费新建tab时间.
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+
+# JAVA -- 暂无
+export ANDROID_HOME="$HOME/dotfiles/AndroidSDK"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+# GO -- GVM
+# [[ -s "/Users/twocucao/.gvm/scripts/gvm" ]] && source "/Users/twocucao/.gvm/scripts/gvm"
+export PATH="/usr/local/sbin:$PATH"
+
+# RUBY -- RVM
+export PATH="$HOME/.rvm/bin:$PATH"
+
+# export PATH="/Users/twocucao/dotfiles/webdrivers:$PATH" # Add RVM to PATH for scripting
+
+# SOURCE 相关
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# eval $(docker-machine env default)
+# export GOENV_ROOT="$HOME/.goenv"
+# export PATH="$GOENV_ROOT/bin:$PATH"
+# eval "$(goenv init -)"

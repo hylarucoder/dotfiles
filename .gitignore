@@ -1,0 +1,14 @@
+*.bak
+*.bk
+*.local
+*.pyc
+.*.local
+.DS_Store
+.netrwhist
+/.config/
+/.ipython/
+/.viminfo
+bundle
+cache/
+dein/
+.zshrc.zwc

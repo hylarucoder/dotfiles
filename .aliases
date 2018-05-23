@@ -1,0 +1,18 @@
+alias diskspace_report="df -P -kHl"
+
+alias fishprofile="vim ~/iCloud/dotfiles/.profile"
+alias fishaliases="vim ~/iCloud/dotfiles/.aliases"
+alias cls='clear'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias ag='ag -f --hidden'
+
+# git related alias
+alias gls-tracked-files="git ls-files -t"
+alias gls-untracked-files="git ls-files --others"
+alias gls-ignored-files="git ls-files --others -i --exclude-standard"
+alias grm-untracked="git clean -f ; git clean -f -d"
+alias gzip-master="git archive master --format=zip --output=master.zip"
+alias glog-vis="git log --pretty=oneline --graph --decorate --all"
+alias git-clean-local-branch="git branch | grep -v "master" | xargs git branch -D"
+alias git-clean-remote-branch="git branch -a --merged remotes/origin/master | grep -v master | grep "remotes/origin/" | cut -d "/" -f 3- | xargs -n 1 git push --delete origin"

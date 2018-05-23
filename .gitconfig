@@ -1,0 +1,16 @@
+[user]
+	email = twocucao@gmail.com
+	name = twocucao
+	signingkey = 61E33192CB11A36C
+[alias]
+	branches = !legit branches
+	publish = !legit publish
+	unpublish = !legit unpublish
+	sync = !legit sync
+	switch = !legit switch
+	resync = !legit resync
+	undo = !legit undo
+	log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[commit]
+	gpgsign = false
