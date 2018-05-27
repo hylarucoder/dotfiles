@@ -3,9 +3,9 @@
 # Update hombrew.
 brew update && brew upgrade && brew cleanup && brew prune
 
-# Python 2 utilities.
-pip2 install --upgrade legit
-pip2 install --upgrade em-keyboard
+# Python 3 utilities.
+pip3 install --upgrade legit
+pip3 install --upgrade em-keyboard
 
 # Update Mac apps.
 mas upgrade

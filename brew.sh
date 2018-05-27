@@ -24,9 +24,10 @@ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # chsh -s /usr/local/bin/bash
 brew install zsh
 sudo bash -c 'echo /usr/local/bin/zsh >> /etc/shells'
+chsh -s /usr/local/bin/zsh
 brew install fish
 sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
-chsh -s /usr/local/bin/fish
+# chsh -s /usr/local/bin/fish
 
 brew install wget --with-iri
 
@@ -40,15 +41,16 @@ brew install pyenv
 brew install pyenv-virtualenv
 brew install pipenv
 
+# Install Rust
+brew install rust
+brew install rustup
+
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
-brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
@@ -133,15 +135,10 @@ brew install fortune
 brew install cowsay
 brew install sl
 
-
 # Install Cask
-brew install caskroom/cask/brew-cask
-brew update && brew upgrade --all && brew cleanup && brew prune
-
-brew tap caskroom/versions
+brew update && brew upgrade && brew cleanup && brew prune
 # aerial 屏保
 # https://github.com/JohnCoates/Aerial
 brew cask install aerial
 # https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
-
