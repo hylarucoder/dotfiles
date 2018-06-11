@@ -289,6 +289,14 @@ function df() {
   df -H $1
 }
 
+function git-rebase-upstream() {
+  branch=${1:-`git symbolic-ref --short HEAD`}
+  git fetch upstream && git rebase upstream/$branch
+}
+
+function rb() {
+  git-rebase-upstream
+}
 
 function pcp() {
   rsync -WavP --human-readable --progress $argv[1] $argv[2]
