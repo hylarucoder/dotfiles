@@ -4,7 +4,7 @@
 # 路径变量放在path中
 # 命令变量放在function和alias中
 # Make vim the default editor.
-export EDITOR='vim';
+export EDITOR='nvim';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;

@@ -1,3 +1,4 @@
+alias vim='nvim'
 alias diskspace_report="df -P -kHl"
 
 alias fishprofile="vim ~/iCloud/dotfiles/.profile"

@@ -16,10 +16,10 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # PYTHON -- 加载PYENV
 
 # 自动补全,比较耗费新建tab时间.
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # JAVA -- 暂无
 export ANDROID_HOME="$HOME/dotfiles/AndroidSDK"

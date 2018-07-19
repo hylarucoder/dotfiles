@@ -72,7 +72,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/iCloud/dotfiles/.yazshrc
+source $HOME/Cystem/dotfiles/.yazshrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
