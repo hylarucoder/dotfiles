@@ -11,6 +11,7 @@ pip3 install --upgrade legit
 pip3 install --upgrade em-keyboard
 pip3 install --upgrade neovim
 pip3 install --upgrade dbgp pep8 flake8 pyflakes isort
+pip3 install --upgrade pycodestyle pyflakes flake8 vim-vint proselint yamllint
 
 # Update Mac apps.
 mas upgrade
@@ -36,4 +37,5 @@ npm install -g gitbook-cli
 npm install -g hexo-cli
 npm install -g speed-test
 npm install -g vue-cli
-
+npm install -g jshint jsxhint jsonlint stylelint sass-lint
+npm install -g raml-cop markdownlint-cli write-good

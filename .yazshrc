@@ -1,4 +1,4 @@
-export DOTFILES_DIR="$HOME/iCloud/dotfiles"
+export DOTFILES_DIR="$HOME/Cystem/dotfiles"
 export PATH="$DOTFILES_DIR/bin:$PATH";
 
 # 依次导入相关设置
