@@ -25,10 +25,13 @@ eval "$(pyenv virtualenv-init -)"
 export ANDROID_HOME="$HOME/dotfiles/AndroidSDK"
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
+eval "$(jenv init -)"
 
 # GO -- GVM
-# [[ -s "/Users/twocucao/.gvm/scripts/gvm" ]] && source "/Users/twocucao/.gvm/scripts/gvm"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
 export PATH="/usr/local/sbin:$PATH"
 
 # RUBY -- RVM
@@ -38,8 +41,11 @@ export PATH="$HOME/.rvm/bin:$PATH"
 
 # SOURCE 相关
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# docker
 # eval $(docker-machine env default)
-# export GOENV_ROOT="$HOME/.goenv"
-# export PATH="$GOENV_ROOT/bin:$PATH"
-# eval "$(goenv init -)"
+
+# older software
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"

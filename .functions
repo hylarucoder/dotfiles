@@ -245,7 +245,7 @@ function git-todos() {
 }
 
 function git-clean-remote-branches() {
-    git branch -r | grep $1/ | grep -v 'master$' | grep -v HEAD| sed "s#^\s*$1/##g" | while read line; do git push $1:$line; done;
+    REMOTE_NAME='origin' git branch -r | grep "${REMOTE_NAME}/" | grep -v 'master$' | grep -v HEAD | sed -E "s/^[[:space:]]*${REMOTE_NAME}\///g" | while read line; do git push $REMOTE_NAME :heads/$line; done;
 }
 
 function up() {

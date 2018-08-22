@@ -135,6 +135,8 @@ brew install fortune
 brew install cowsay
 brew install sl
 
+brew install goenv
+
 # Install Cask
 brew update && brew upgrade && brew cleanup && brew prune
 # aerial 屏保
@@ -142,3 +144,5 @@ brew update && brew upgrade && brew cleanup && brew prune
 brew cask install aerial
 # https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew cask install keycastr
+
