@@ -74,3 +74,5 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/Cystem/dotfiles/.yazshrc
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -5,16 +5,6 @@ if test ! $(which brew); then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew update
-brew upgrade --all
-
-brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-
-brew install binutils --with-default-names
-brew install moreutils
-brew install findutils --with-default-names
-brew install gnu-sed --with-default-names
 
 # Shell Support
 brew install bash
@@ -42,34 +32,39 @@ brew install pyenv-virtualenv
 brew install pipenv
 
 # Install Rust
-brew install rust
 brew install rustup
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+brew install neovim
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
-# Install font tools.
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
+brew install coreutils
+sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install diffutils
-brew install dns2tcp
-brew install ed --with-default-names
-brew install fcrackzip
+brew install binutils --with-default-names
+brew install moreutils
 brew install findutils --with-default-names
-brew install foremost
-brew install gawk
+brew install gnu-sed --with-default-names
+brew install ed --with-default-names
+brew install findutils --with-default-names
 brew install gnu-indent --with-default-names
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
-brew install gnutls
 brew install grep --with-default-names
+brew install wget
+brew install bat
+brew install exa
+brew install json_pp
+
+brew install dns2tcp
+brew install fcrackzip
+brew install foremost
+brew install gawk
+brew install gnutls
 brew install gzip
-brew install hashpump
 brew install homebrew/x11/xpdf
 brew install hydra
 brew install john
@@ -85,41 +80,33 @@ brew install tcpreplay
 brew install tcptrace
 brew install tmux
 brew install ucspi-tcp # `tcpserver` etc.
-brew install watch
 brew install wdiff --with-gettext
-brew install wget
 brew install xz
 
 # Install other useful binaries.
-brew install ack
-brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
-brew install git-flow
 brew install git-extras
 brew install hub
 brew install imagemagick --with-webp
 brew install ffmpeg --with-libvpx
-brew install terminal-notifier
-brew install ncdu
 brew install lua
-brew install lynx
 brew install p7zip
 brew install pigz
 brew install pv
 brew install rename
-brew install rhino
-brew install speedtest_cli
-brew install ssh-copy-id
 brew install tree
+brew install ssh-copy-id
 brew install webkit2png
 brew install zopfli
-brew install pkg-config libffi
+brew install pkg-config
+brew install libffi
 brew install pandoc
 brew install gpg
 brew install thefuck
 brew install fzf
+
+brew install terminal-notifier
 
 # Lxml and Libxslt
 brew install libxml2
@@ -133,12 +120,9 @@ brew install pkg-config cairo pango libpng jpeg giflib
 # funny tools
 brew install fortune
 brew install cowsay
-brew install sl
 
 brew install goenv
 
-# Install Cask
-brew update && brew upgrade && brew cleanup && brew prune
 # aerial 屏保
 # https://github.com/JohnCoates/Aerial
 brew cask install aerial
