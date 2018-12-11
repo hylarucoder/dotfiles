@@ -337,8 +337,8 @@ function nvm() {
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-function pyenv() {
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-	pyenv $@
-}
+# function pyenv() {
+#   eval "$(pyenv init -)"
+#   eval "$(pyenv virtualenv-init -)"
+# 	pyenv $@
+# }
