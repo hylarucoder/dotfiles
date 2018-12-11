@@ -15,6 +15,7 @@ pip3 install -U neovim
 pip3 install -U black
 pip3 install -U flake8 pyflakes isort pycodestyle 
 pip3 install -U vim-vint proselint yamllint 
+pip3 install -U tldr
 
 
 # NODE

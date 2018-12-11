@@ -21,11 +21,6 @@ function bytes_for_humans {
 #
 ##############################################################
 
-# FileSearch
-function f() {
-    find . -iname "*$1*" ${@:2} 
-}
-
 # FileSearch mv
 function fmv() {
     find . -iname "*$1*" -exec mv -t "$2" {} +
@@ -230,8 +225,7 @@ function pyclean () {
 ##############################################################
 
 function setproxy() {
-#    export {HTTP,HTTPS,FTP}_PROXY="http://127.0.0.1:3128" 也可以设置http代理
-    export ALL_PROXY=socks5://127.0.0.1:1080
+    export ALL_PROXY=socks5://127.0.0.1:1086
 }
 
 function unsetproxy() {
@@ -317,17 +311,34 @@ function ls-wifi() {
   networksetup -listpreferredwirelessnetworks en0
 }
 
-function auto_pipenv_shell {
-    if [ ! -n "${PIPENV_ACTIVE+1}" ]; then
-        if [ -f "Pipfile" ] ; then
-            pipenv shell
+
+function auto_poetry_shell {
+    if [ ! -n "${POETRY_ACTIVE+1}" ]; then
+        if [ -f "pyproject.toml" ] ; then
+            poetry shell
         fi
     fi
 }
 
 function cd {
     builtin cd "$@"
-    auto_pipenv_shell
+    auto_poetry_shell
 }
 
-auto_pipenv_shell
+auto_poetry_shell
+
+# NVM - 懒加载
+export NVM_DIR="$HOME/.nvm"
+function nvm() {
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+	nvm $@
+}
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+function pyenv() {
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+	pyenv $@
+}
