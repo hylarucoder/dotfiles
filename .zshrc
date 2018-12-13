@@ -7,7 +7,8 @@ export ZSH=/Users/twocucao/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+# ZSH_THEME="bullet-train"
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -74,3 +75,5 @@ source $HOME/Cystem/dotfiles/.yazshrc
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
