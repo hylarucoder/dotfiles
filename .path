@@ -9,7 +9,7 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$PATH"
-
+export PATH="$HOME/Cystem/bin:$PATH"
 
 # JAVA -- 暂无
 export ANDROID_HOME="$HOME/Software/AndroidSDK"
@@ -22,7 +22,7 @@ export PATH="$HOME/.jenv/bin:$PATH"
 
 # GO -- GVM
 export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 # eval "$(goenv init -)"
 export GOPATH=$HOME/Codes/ReposGo
 
