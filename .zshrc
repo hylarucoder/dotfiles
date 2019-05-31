@@ -63,7 +63,6 @@ plugins=(
   git
   osx
   fzf
-  battery
   github
   iterm2
   z
@@ -81,3 +80,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
