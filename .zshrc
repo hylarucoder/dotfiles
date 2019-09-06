@@ -72,8 +72,10 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/Cystem/dotfiles/.yazshrc
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH="$PATH:$HOME/Cystem/flutter/bin"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -83,5 +85,5 @@ prompt spaceship
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# export PATH="/usr/bin:$PATH:$HOME/Cystem/flutter/bin"
+export PATH="/usr/local/opt/curl/bin:$PATH"
