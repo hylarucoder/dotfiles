@@ -61,11 +61,11 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  navi
   osx
   fzf
   github
   iterm2
-  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -76,6 +76,7 @@ source $HOME/Cystem/dotfiles/.yazshrc
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export PATH="$PATH:$HOME/Cystem/flutter/bin"
+export PATH="$PATH:$HOME/.poetry/bin"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -87,3 +88,9 @@ prompt spaceship
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 # export PATH="/usr/bin:$PATH:$HOME/Cystem/flutter/bin"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+# export PATH="$HOME/Cystem/anaconda/bin:/usr/local/opt/ruby/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/openssl/lib -L/usr/local/opt/llvm/lib -L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="-I/usr/local/opt/openssl/include -I/usr/local/opt/llvm/include -I/usr/local/opt/zlib/include"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
