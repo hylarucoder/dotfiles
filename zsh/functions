@@ -312,20 +312,6 @@ function ls-wifi() {
 }
 
 
-function auto_poetry_shell {
-    if [ ! -n "${POETRY_ACTIVE+1}" ]; then
-        if [ -f "pyproject.toml" ] ; then
-            poetry shell
-        fi
-    fi
-}
-
-function cd {
-    builtin cd "$@"
-    auto_poetry_shell
-}
-
-auto_poetry_shell
 
 # NVM - 懒加载
 export NVM_DIR="$HOME/.nvm"
@@ -334,11 +320,3 @@ function nvm() {
 	nvm $@
 }
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# function pyenv() {
-#   eval "$(pyenv init -)"
-#   eval "$(pyenv virtualenv-init -)"
-# 	pyenv $@
-# }

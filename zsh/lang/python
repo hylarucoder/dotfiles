@@ -1,0 +1,22 @@
+export PATH="$PATH:$HOME/.poetry/bin"
+eval "$(pyenv init -)"
+alias py2env="source ~/.virtualenvs/py2/bin/activate"
+alias py3env="source ~/.virtualenvs/py3/bin/activate"
+export PYTHONIOENCODING='UTF-8';
+
+function auto_poetry_shell {
+    if [ ! -n "${POETRY_ACTIVE+1}" ]; then
+        if [ -f "pyproject.toml" ] ; then
+            poetry shell
+        fi
+    fi
+}
+
+function cd {
+    builtin cd "$@"
+    auto_poetry_shell
+}
+
+auto_poetry_shell
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
