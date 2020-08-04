@@ -1,5 +1,5 @@
 alias f="fd"
-alias vim='nvim'
+# alias vim='nvim'
 alias diskspace_report="df -P -kHl"
 
 alias zshprofile="vim ~/iCloud/dotfiles/.profile"
