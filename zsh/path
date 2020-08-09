@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# 路径相关,主要是用来引入bin文件
+
+
+# RUBY -- RVM
+export PATH="$HOME/.rvm/bin:$PATH"
+
+# older software
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+export PATH="$HOME/Cystem/bin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+export PATH="/usr/local/sbin:$PATH"

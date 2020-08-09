@@ -6,12 +6,8 @@ mas upgrade
 # Update brew and software installed by hombrew.
 brew update && brew upgrade && brew cleanup && brew prune
 
-# Python 2 utilities.
-pip install -U neovim
-
 # Python 3 utilities.
 pip3 install -U em-keyboard
-pip3 install -U neovim
 pip3 install -U black
 pip3 install -U flake8 pyflakes isort pycodestyle 
 pip3 install -U vim-vint proselint yamllint 

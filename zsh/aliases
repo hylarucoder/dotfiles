@@ -2,8 +2,6 @@ alias f="fd"
 # alias vim='nvim'
 alias diskspace_report="df -P -kHl"
 
-alias zshprofile="vim ~/iCloud/dotfiles/.profile"
-alias zshaliases="vim ~/iCloud/dotfiles/.aliases"
 alias cls='clear'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
@@ -21,5 +19,3 @@ alias glog-vis="git log --pretty=oneline --graph --decorate --all"
 alias git-clean-local-branch="git branch | grep -v "master" | xargs git branch -D"
 alias git-clean-remote-branch="git branch -a --merged remotes/origin/master | grep -v master | grep "remotes/origin/" | cut -d "/" -f 3- | xargs -n 1 git push --delete origin"
 
-alias py2env="source ~/.virtualenvs/py2/bin/activate"
-alias py3env="source ~/.virtualenvs/py3/bin/activate"
