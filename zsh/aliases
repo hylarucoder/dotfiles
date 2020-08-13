@@ -1,5 +1,6 @@
 alias f="fd"
-# alias vim='nvim'
+alias vim='nvim'
+alias mvim='nvim'
 alias diskspace_report="df -P -kHl"
 
 alias cls='clear'
