@@ -320,3 +320,21 @@ function nvm() {
 	nvm $@
 }
 
+dirty-staging() {
+	brc=`git branch --show-current`
+	git checkout develop
+	git pull upstream develop
+	git merge $brc
+	git push upstream develop
+	poetry run fab staging
+	git checkout -
+}
+dirty-staging() {
+	brc=`git branch --show-current`
+	git checkout develop
+	git pull upstream develop
+	git merge $brc
+	git push upstream develop
+	poetry run fab staging
+	git checkout -
+}
