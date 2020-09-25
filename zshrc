@@ -5,6 +5,10 @@ ZSH_THEME="agnoster"
 
 plugins=(
 	git
+	rust
+	rustup
+	vi-mode
+	autojump
 	fzf
 	osx
 	docker
