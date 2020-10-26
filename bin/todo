@@ -1,0 +1,6 @@
+#!/bin/sh
+
+filename=TODO.md
+cd $HOME/Workspace/gist/
+
+vim $filename
