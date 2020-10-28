@@ -1,5 +1,6 @@
 export GO111MODULE=on
-export GOPROXY=https://goproxy.cn
+export GOPROXY="https://goproxy.cn,direct"
+
 # GO -- GVM
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOPATH/bin:$PATH"
