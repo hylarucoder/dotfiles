@@ -8,8 +8,8 @@
 
 ```bash
 mkdir ~/Cystem
-cd ~/Cystem && git clone git@github.com:twocucao/dotfiles.git
-
+cd ~/Cystem && git clone git@github.com:twocucao/dotfiles.git && cd dotfiles
+ln -sfv `pwd`/zshrc ~/.zshrc
 ```
 
 
