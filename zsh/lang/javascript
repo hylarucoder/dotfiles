@@ -1,4 +1,0 @@
-export NODE_REPL_HISTORY=~/.node_history;
-export NODE_REPL_HISTORY_SIZE='32768';
-export NODE_REPL_MODE='sloppy';
-export PATH="$HOME/.yarn/bin:$PATH"

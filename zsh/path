@@ -1,17 +1,52 @@
 #!/usr/bin/env sh
 # 路径相关,主要是用来引入bin文件
 
-
-# RUBY -- RVM
-export PATH="$HOME/.rvm/bin:$PATH"
+# use gnu instead unix
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX=$(brew --prefix)
+  # gnubin; gnuman
+  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
+  # I actually like that man grep gives the BSD grep man page
+  #for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnuman; do export MANPATH=$d:$MANPATH; done
+fi
+# 本地 命令
+export PATH="$HOME/Cystem/bin:$PATH"
 
 # older software
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-export PATH="$HOME/Cystem/bin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+
+# === flutter
+export PATH="$HOME/Cystem/flutter/bin;$PATH"
+# === rvm
+export PATH="$HOME/.rvm/bin:$PATH"
+# === java
+export PATH="$HOME/.jenv/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+# === java android
+export ANDROID_HOME="$HOME/Software/AndroidSDK"
+export ANDROID_TOOLS=$ANDROID_HOME/tools
+export ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
+export ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/30.0.2
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_PLATFORM_TOOLS"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+
+# === golang
+export GO111MODULE=on
+export GOPROXY="https://goproxy.cn,direct"
+
+# GO -- GVM
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOPATH/bin:$PATH"
+export GOPATH=$HOME/Cystem/Go
+
+# JavaScript / NodeJS
+export NODE_REPL_HISTORY=~/.node_history;
+export NODE_REPL_HISTORY_SIZE='32768';
+export NODE_REPL_MODE='sloppy';
+export PATH="$HOME/.yarn/bin:$PATH"

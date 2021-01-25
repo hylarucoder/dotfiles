@@ -1,16 +1,8 @@
 export TERM="xterm-256color"
-
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
-export PATH="$PATH:$HOME/Cystem/flutter/bin"
-export PATH="$PATH:$HOME/.local/bin"
 
-export PATH="/usr/local/opt/curl/bin:$PATH"
-# export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-# export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
-# export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
-# export CFLAGS="-I/usr/local/include -L/usr/local/lib"
 export EDITOR='nvim';
 
 export FZF_DEFAULT_COMMAND='rg --files';
@@ -20,6 +12,8 @@ export HISTFILESIZE="${HISTSIZE}";
 export HISTCONTROL='ignoreboth';
 
 export MANPAGER='less -X';
+export CFLAGS="-I/usr/local/include -L/usr/local/lib"
+
 
 ##############################################################
 #
@@ -28,5 +22,4 @@ export MANPAGER='less -X';
 ##############################################################
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
-
 

@@ -41,19 +41,18 @@ brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
 
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install diffutils
-brew install binutils --with-default-names
+brew install binutils 
 brew install moreutils
-brew install findutils --with-default-names
-brew install gnu-sed --with-default-names
-brew install ed --with-default-names
-brew install findutils --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-which --with-default-names
-brew install grep --with-default-names
+brew install findutils
+brew install gnu-sed
+brew install ed
+brew install findutils
+brew install gnu-indent
+brew install gnu-sed
+brew install gnu-tar
+brew install gnu-which
+brew install grep
 brew install wget
 brew install bat
 brew install exa
