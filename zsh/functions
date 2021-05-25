@@ -280,6 +280,11 @@ function git-rebase-upstream() {
   git fetch upstream && git rebase upstream/$branch
 }
 
+function git-rebase-origin() {
+  branch=${1:-`git symbolic-ref --short HEAD`}
+  git fetch origin && git rebase origin/$branch
+}
+
 function rb() {
   git-rebase-upstream
 }
@@ -330,3 +335,9 @@ dirty-staging() {
 	poetry run fab staging
 	git checkout -
 }
+
+git-recently() {
+	git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+}
+
+

@@ -19,6 +19,7 @@ plugins=(
 	vi-mode
 	autojump
 	fzf
+	pyenv
 	osx
 	docker
 	zsh-autosuggestions
@@ -50,13 +51,17 @@ for f in ~/Cystem/dotfiles/zsh/lang/*; do
 done
 
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
-# . $HOME/.asdf/asdf.sh
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/bin
-ANDROID_HOME=/Users/twocucao/Cystem/Android/SDK
-ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
-ANDROID_TOOLS=$ANDROID_HOME/tools
-ANDROID_BUILD_TOOLS=$ANDROID_HOME/build-tools/30.0.2
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=$PATH:/Users/twocucao/Cystem/dotfiles/bin
+
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
+
+alias gf=gf
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
