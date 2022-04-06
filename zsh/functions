@@ -310,13 +310,6 @@ function ls-wifi() {
 
 
 
-# NVM - 懒加载
-export NVM_DIR="$HOME/.nvm"
-function nvm() {
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-	nvm $@
-}
-
 dirty-staging() {
 	brc=`git branch --show-current`
 	git checkout develop
