@@ -13,11 +13,11 @@ fi
 export PATH="$HOME/Cystem/bin:$PATH"
 
 # older software
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 # export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
+# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # === flutter
 export PATH="$HOME/Cystem/flutter/bin;$PATH"
@@ -40,7 +40,7 @@ export PATH="$PATH:$ANDROID_HOME/emulator"
 export GO111MODULE=on
 export GOPROXY="https://goproxy.cn,direct"
 export GOPATH=$HOME/.go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/opt/homebrew/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
