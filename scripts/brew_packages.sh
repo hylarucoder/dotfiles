@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if test ! $(which brew); then
-    echo "Installing homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-
-# Shell Support
 brew install bash
 brew install bash-completion2
 echo "Adding the newly installed shell to the list of allowed shells"
@@ -54,6 +47,8 @@ brew install gzip
 brew install nmap
 brew install sqlmap
 brew install tmux
+brew install autojump
+
 
 brew install git
 brew install hub
@@ -81,8 +76,6 @@ brew install pkg-config cairo pango libpng jpeg giflib
 # funny tools
 brew install fortune
 brew install cowsay
-
-brew install goenv
 
 # https://github.com/sindresorhus/quick-look-plugins
 brew install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package apparency quicklookase qlvideo

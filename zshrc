@@ -47,7 +47,10 @@ export CARGO_NET_GIT_FETCH_WITH_CLI=true
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(pyenv init -)"
 
 export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
 export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
@@ -58,6 +61,9 @@ export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
 #export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 #export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
+SSH_AGENT_TYPE="default"
+
+
 function auto_poetry_shell {
     if [ ! -n "${POETRY_ACTIVE+1}" ]; then
         if [ -f "pyproject.toml" ] ; then
@@ -66,7 +72,6 @@ function auto_poetry_shell {
     fi
 }
 
-SSH_AGENT_TYPE="default"
 
 function cd {
     builtin cd "$@"
@@ -75,3 +80,13 @@ function cd {
 
 auto_poetry_shell
 
+
+#export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/twocucao/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
